@@ -72,9 +72,9 @@ app.use("/api-doc", swaggerUi.serve, swaggerUi.setup(spec));
 app.use(errroMiddelware);
 
 //port
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 10000;
 //listen
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(
     `Node Server Running In ${process.env.DEV_MODE} Mode on port no ${PORT}`
       .bgCyan.white
